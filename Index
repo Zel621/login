@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        {% if user %}
+        <h1>Welcome, {{ user }}!</h1>
+        <a href="/logout" class="button">Logout</a>
+        {% else %}
+        <h1>Welcome to the homepage!</h1>
+        <a href="/signup" class="button">Sign Up</a>
+        <a href="/login" class="button">Login</a>
+        {% endif %}
+    </div>
+</body>
+</html>
