@@ -1,0 +1,13 @@
+function validateSignup() {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const errorMessage = document.getElementById('error');
+
+    if (password !== confirmPassword) {
+        errorMessage.textContent = 'Passwords do not match!';
+        return false;
+    }
+
+    errorMessage.textContent = '';
+    return true;
+}
